@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: class-imobiliaria
+    runtime: static
+    staticPublishPath: .
+    buildCommand: ""
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /Class Imóveis Búzios.dc.html
