@@ -10,6 +10,7 @@
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link rel=preload as=image href=assets/piscina-infinita.webp type=image/webp fetchpriority=high />
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { box-sizing: border-box; }
@@ -52,7 +53,7 @@
 <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
 <main>
   <section style="position:relative;height:min(94vh,980px);min-height:620px;overflow:hidden;background:#111">
-    <img src="assets/piscina-infinita.png" alt="Casa com piscina de borda infinita em Búzios" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04)" />
+    <img src="assets/piscina-infinita.webp" alt="Casa com piscina de borda infinita em Búzios" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04)" />
     <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,18,.52) 0%,rgba(10,14,18,.14) 34%,rgba(10,14,18,.62) 100%)"></div>
     <div style="position:relative;height:100%;max-width:1560px;margin:0 auto;padding:0 clamp(20px,4vw,64px);display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(28px,5vh,64px)">
       <div style="max-width:820px;margin-bottom:auto;margin-top:clamp(120px,22vh,240px)">
@@ -195,7 +196,7 @@
   <section id="sobre" data-reveal="1" style="max-width:1560px;margin:0 auto;padding:clamp(72px,11vw,150px) clamp(20px,4vw,64px) clamp(60px,8vw,110px)">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,5vw,80px);align-items:center">
       <div style="display:flex;gap:clamp(18px,2vw,28px);align-items:flex-start">
-        <img src="assets/camila.png" alt="Camila Class, corretora de imóveis em Búzios" loading="lazy" style="width:clamp(96px,12vw,150px);height:clamp(96px,12vw,150px);object-fit:cover;border-radius:50%;flex-shrink:0" />
+        <img src="assets/camila.webp" alt="Camila Class, corretora de imóveis em Búzios" loading="lazy" style="width:clamp(96px,12vw,150px);height:clamp(96px,12vw,150px);object-fit:cover;border-radius:50%;flex-shrink:0" />
         <div style="padding-top:6px">
           <p style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B6B6B;margin:0 0 14px">Sua corretora</p>
           <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(28px,3.4vw,44px);line-height:1.1;margin:0">Camila Class</h2>
@@ -370,7 +371,7 @@
         <button onClick="{{ sendInterest }}" style="width:100%;background:#0E3A4F;color:#fff;border:0;padding:16px;margin-top:24px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background 240ms" style-hover="background:#C2763F">{{ sendLabel }}</button>
         <a href="{{ detail.waHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;border:1px solid #E8E8E5;padding:15px;margin-top:10px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#111;transition:border-color 240ms" style-hover="border-color:#111">WhatsApp direto</a>
         <div style="display:flex;align-items:center;gap:12px;margin-top:26px;padding-top:22px;border-top:1px solid #E8E8E5">
-          <img src="assets/camila.png" alt="Camila Class" loading="lazy" style="width:42px;height:42px;border-radius:50%;object-fit:cover" />
+          <img src="assets/camila.webp" alt="Camila Class" loading="lazy" style="width:42px;height:42px;border-radius:50%;object-fit:cover" />
           <div>
             <span style="display:block;font-size:14px">Camila Class</span>
             <span style="display:block;font-size:12px;color:#6B6B6B;margin-top:3px">CRECI RJ 107415</span>
@@ -535,7 +536,7 @@ const PROPERTIES = [
   { id: 1, slug: 'casa-piscina-infinita-ferradura', reference: '1024', title: 'Residência Vista Ferradura', purpose: 'venda', type: 'Casa',
     price: 2450000, condo: 0, neighborhood: 'Ferradura', area: 340, bedrooms: 4, suites: 4, bathrooms: 5, parking: 4, featured: true,
     features: ['Piscina', 'Área gourmet', 'Churrasqueira', 'Vista para o mar', 'Condomínio fechado', 'Suítes', 'Mobiliado', 'Sacada'],
-    images: [A + 'piscina-infinita.png', A + 'terraco-mar.png', A + 'sala-estar.png', A + 'churrasqueira.png', A + 'por-do-sol.png'],
+    images: [A + 'piscina-infinita.webp', A + 'terraco-mar.webp', A + 'sala-estar.webp', A + 'churrasqueira.webp', A + 'por-do-sol.webp'],
     alt: 'Casa com piscina de borda infinita voltada para o mar na Ferradura',
     description: 'Implantada no ponto alto da Ferradura, a casa foi desenhada para o horizonte: planta em L, piscina de borda infinita alinhada à linha d\u2019água e esquadrias de vidro que desaparecem quando abertas. Os quatro dormitórios são suítes, três com varanda própria. Área gourmet coberta com churrasqueira, forno a lenha e adega climatizada. Condomínio fechado com portaria 24h, a cinco minutos da Praia da Ferradura.',
     location: 'Rua de acesso privativo na parte alta da Ferradura, região residencial e silenciosa, com descida direta para a praia.',
@@ -544,7 +545,7 @@ const PROPERTIES = [
   { id: 2, slug: 'casa-contemporanea-geriba', reference: '1031', title: 'Casa Contemporânea Geribá', purpose: 'venda', type: 'Casa',
     price: 1890000, condo: 680, neighborhood: 'Geribá', area: 260, bedrooms: 4, suites: 2, bathrooms: 4, parking: 3, featured: true,
     features: ['Piscina', 'Área gourmet', 'Churrasqueira', 'Condomínio fechado', 'Suítes', 'Sacada', 'Aceita pets'],
-    images: [A + 'casa-moderna-piscina.png', A + 'piscina-jardim.png', A + 'sala-estar.png', A + 'varanda-interior.png'],
+    images: [A + 'casa-moderna-piscina.webp', A + 'piscina-jardim.webp', A + 'sala-estar.webp', A + 'varanda-interior.webp'],
     alt: 'Casa contemporânea branca com piscina e jardim em Geribá',
     description: 'Volumes brancos, laje plana e jardim contínuo entre a sala e a piscina. O pavimento térreo é inteiramente integrado — estar, jantar e cozinha em um só ambiente de pé-direito duplo — e abre para o deck em duas faces. No pavimento superior, quatro dormitórios, sendo duas suítes com vista para o jardim. A poucos minutos da Praia de Geribá.',
     location: 'Condomínio residencial em Geribá, rua tranquila, acesso asfaltado até a portaria.',
@@ -553,7 +554,7 @@ const PROPERTIES = [
   { id: 3, slug: 'sobrado-piscina-rasa', reference: '1038', title: 'Sobrado com Piscina na Rasa', purpose: 'venda', type: 'Sobrado',
     price: 1150000, condo: 0, neighborhood: 'Rasa', area: 210, bedrooms: 3, suites: 1, bathrooms: 3, parking: 2, featured: true,
     features: ['Piscina', 'Churrasqueira', 'Sacada', 'Suíte', 'Aceita pets', 'Área gourmet'],
-    images: [A + 'fachada-piscina.png', A + 'varanda-interior.png', A + 'churrasqueira.png', A + 'sala-estar.png'],
+    images: [A + 'fachada-piscina.webp', A + 'varanda-interior.webp', A + 'churrasqueira.webp', A + 'sala-estar.webp'],
     alt: 'Sobrado com revestimento em madeira e piscina na Rasa',
     description: 'Fachada em painéis de madeira e concreto aparente, com piscina posicionada no fundo do terreno para o sol da tarde. Três dormitórios no pavimento superior, um deles suíte com sacada. Terreno amplo, com espaço para ampliação da área gourmet.',
     location: 'Bairro da Rasa, região em valorização, com comércio local consolidado e acesso rápido à RJ-102.',
@@ -562,7 +563,7 @@ const PROPERTIES = [
   { id: 4, slug: 'casa-mobiliada-ferradura', reference: '1042', title: 'Casa Mobiliada na Ferradura', purpose: 'aluguel', type: 'Casa',
     price: 4000, condo: 0, neighborhood: 'Ferradura', area: 120, bedrooms: 2, suites: 1, bathrooms: 2, parking: 2, featured: false,
     features: ['Mobiliado', 'Churrasqueira', 'Sacada', 'Suíte', 'Aceita pets'],
-    images: [A + 'casa-amarela-deck.png', A + 'cozinha-sala.png', A + 'sala-estar.png'],
+    images: [A + 'casa-amarela-deck.webp', A + 'cozinha-sala.webp', A + 'sala-estar.webp'],
     alt: 'Casa amarela com deck e pergolado na Ferradura',
     description: 'Primeira locação após reforma completa. Casa entregue mobiliada e equipada, com deck coberto por pergolado na entrada e jardim frontal. Dois dormitórios, sendo uma suíte com ar-condicionado, e cozinha americana integrada à sala.',
     location: 'Rua residencial da Ferradura, a cinco minutos de caminhada da praia.',
@@ -571,7 +572,7 @@ const PROPERTIES = [
   { id: 5, slug: 'apartamento-primeira-locacao-centro', reference: '1049', title: 'Apartamento Primeira Locação', purpose: 'aluguel', type: 'Apartamento',
     price: 3200, condo: 420, neighborhood: 'Centro', area: 78, bedrooms: 1, suites: 1, bathrooms: 2, parking: 1, featured: false,
     features: ['Mobiliado', 'Elevador', 'Sacada', 'Suíte', 'Academia'],
-    images: [A + 'cozinha-sala.png', A + 'sala-estar.png', A + 'varanda-interior.png'],
+    images: [A + 'cozinha-sala.webp', A + 'sala-estar.webp', A + 'varanda-interior.webp'],
     alt: 'Sala e cozinha integradas de apartamento novo no Centro',
     description: 'Apartamento novo, nunca habitado, com acabamento em porcelanato e cozinha planejada. Suíte com ar-condicionado, banheiro social e área de serviço independente. Prédio com elevador, academia e portaria.',
     location: 'Centro de Armação dos Búzios, a duas quadras da Rua das Pedras.',
@@ -580,7 +581,7 @@ const PROPERTIES = [
   { id: 6, slug: 'cobertura-vista-joao-fernandes', reference: '1055', title: 'Cobertura Vista João Fernandes', purpose: 'temporada', type: 'Cobertura',
     price: 1200, condo: 0, neighborhood: 'João Fernandes', area: 145, bedrooms: 3, suites: 2, bathrooms: 3, parking: 2, featured: true,
     features: ['Vista para o mar', 'Churrasqueira', 'Área gourmet', 'Mobiliado', 'Elevador', 'Sacada', 'Suítes'],
-    images: [A + 'terraco-mar.png', A + 'por-do-sol.png', A + 'sala-estar.png', A + 'churrasqueira.png'],
+    images: [A + 'terraco-mar.webp', A + 'por-do-sol.webp', A + 'sala-estar.webp', A + 'churrasqueira.webp'],
     alt: 'Terraço com churrasqueira e vista para o mar em João Fernandes',
     description: 'Cobertura com terraço voltado para a enseada, churrasqueira de alvenaria e mesa externa para seis pessoas. Três dormitórios, dois em suíte, todos com ar-condicionado. Locação por temporada com roupa de cama e enxoval inclusos.',
     location: 'Encosta de João Fernandes, com acesso a pé às praias de João Fernandes e João Fernandinho.',
@@ -589,7 +590,7 @@ const PROPERTIES = [
   { id: 7, slug: 'casa-condominio-rasa', reference: '1061', title: 'Casa em Condomínio na Rasa', purpose: 'venda', type: 'Casa',
     price: 980000, condo: 540, neighborhood: 'Rasa', area: 180, bedrooms: 3, suites: 1, bathrooms: 2, parking: 2, featured: false,
     features: ['Piscina', 'Condomínio fechado', 'Churrasqueira', 'Aceita pets', 'Suíte'],
-    images: [A + 'piscina-jardim.png', A + 'churrasqueira.png', A + 'sala-estar.png'],
+    images: [A + 'piscina-jardim.webp', A + 'churrasqueira.webp', A + 'sala-estar.webp'],
     alt: 'Piscina com jardim e vista para o mar em condomínio na Rasa',
     description: 'Casa térrea em condomínio com piscina comunitária ao lado do jardim, vista parcial para a enseada. Três dormitórios, sala ampla e varanda coberta. Condomínio com portaria e manutenção inclusas.',
     location: 'Condomínio na Rasa, região de casas de veraneio e moradores fixos.',
@@ -598,7 +599,7 @@ const PROPERTIES = [
   { id: 8, slug: 'apartamento-novo-centro', reference: '1067', title: 'Apartamento Novo no Centro', purpose: 'venda', type: 'Apartamento',
     price: 620000, condo: 380, neighborhood: 'Centro', area: 65, bedrooms: 2, suites: 1, bathrooms: 2, parking: 1, featured: false,
     features: ['Elevador', 'Sacada', 'Suíte', 'Academia', 'Mobiliado'],
-    images: [A + 'sala-estar.png', A + 'cozinha-sala.png', A + 'varanda-interior.png'],
+    images: [A + 'sala-estar.webp', A + 'cozinha-sala.webp', A + 'varanda-interior.webp'],
     alt: 'Sala de estar clara de apartamento novo no Centro',
     description: 'Dois dormitórios com suíte, sala em porcelanato claro e janelas amplas voltadas ao jardim interno do prédio. Entregue com armários planejados na cozinha e nos quartos.',
     location: 'Centro, entre a Rua das Pedras e a Praia da Armação.',
@@ -607,7 +608,7 @@ const PROPERTIES = [
   { id: 9, slug: 'casa-area-gourmet-manguinhos', reference: '1073', title: 'Casa com Área Gourmet', purpose: 'aluguel', type: 'Casa',
     price: 5500, condo: 0, neighborhood: 'Manguinhos', area: 195, bedrooms: 3, suites: 1, bathrooms: 3, parking: 3, featured: false,
     features: ['Área gourmet', 'Churrasqueira', 'Piscina', 'Aceita pets', 'Mobiliado', 'Suíte'],
-    images: [A + 'churrasqueira.png', A + 'fachada-piscina.png', A + 'sala-estar.png'],
+    images: [A + 'churrasqueira.webp', A + 'fachada-piscina.webp', A + 'sala-estar.webp'],
     alt: 'Área gourmet com churrasqueira de tijolo aparente em Manguinhos',
     description: 'Casa voltada para receber: área gourmet coberta com churrasqueira de tijolo aparente, bancada em granito e espaço para mesa de dez lugares. Três dormitórios, sendo uma suíte, e piscina no quintal.',
     location: 'Manguinhos, próximo ao canal e à área de esportes náuticos.',
@@ -616,7 +617,7 @@ const PROPERTIES = [
   { id: 10, slug: 'loft-integrado-centro', reference: '1079', title: 'Loft Integrado com Varanda', purpose: 'venda', type: 'Apartamento',
     price: 745000, condo: 450, neighborhood: 'Centro', area: 92, bedrooms: 2, suites: 1, bathrooms: 2, parking: 1, featured: false,
     features: ['Sacada', 'Elevador', 'Mobiliado', 'Suíte', 'Aceita pets'],
-    images: [A + 'varanda-interior.png', A + 'cozinha-sala.png', A + 'sala-estar.png'],
+    images: [A + 'varanda-interior.webp', A + 'cozinha-sala.webp', A + 'sala-estar.webp'],
     alt: 'Varanda integrada com vidro e vista aberta no Centro',
     description: 'Planta integrada com varanda envidraçada em toda a extensão social, bancada americana e pé-direito alto. Dois dormitórios, suíte com closet. Prédio pequeno, de apenas oito unidades.',
     location: 'Centro, rua paralela à orla, com comércio a pé.',
@@ -624,11 +625,11 @@ const PROPERTIES = [
 ];
 
 const NEIGHBORHOODS = [
-  { name: 'Ferradura', img: A + 'piscina-infinita.png', alt: 'Casa com piscina na Ferradura' },
-  { name: 'Geribá', img: A + 'casa-moderna-piscina.png', alt: 'Casa contemporânea em Geribá' },
-  { name: 'Centro', img: A + 'por-do-sol.png', alt: 'Pôr do sol na enseada do Centro de Búzios' },
-  { name: 'João Fernandes', img: A + 'terraco-mar.png', alt: 'Terraço com vista para o mar em João Fernandes' },
-  { name: 'Rasa', img: A + 'piscina-jardim.png', alt: 'Piscina com jardim na Rasa' }
+  { name: 'Ferradura', img: A + 'piscina-infinita.webp', alt: 'Casa com piscina na Ferradura' },
+  { name: 'Geribá', img: A + 'casa-moderna-piscina.webp', alt: 'Casa contemporânea em Geribá' },
+  { name: 'Centro', img: A + 'por-do-sol.webp', alt: 'Pôr do sol na enseada do Centro de Búzios' },
+  { name: 'João Fernandes', img: A + 'terraco-mar.webp', alt: 'Terraço com vista para o mar em João Fernandes' },
+  { name: 'Rasa', img: A + 'piscina-jardim.webp', alt: 'Piscina com jardim na Rasa' }
 ];
 
 const LIFESTYLES = [
