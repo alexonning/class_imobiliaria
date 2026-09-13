@@ -6,5 +6,8 @@ services:
     buildCommand: ""
     routes:
       - type: rewrite
-        source: /*
-        destination: /Class Imóveis Búzios.dc.html
+        source: /imovel/*
+        destination: /index.html
+      - type: rewrite
+        source: /imoveis
+        destination: /index.html
