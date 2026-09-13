@@ -739,6 +739,7 @@ class Component extends DCLogic {
     if (view === 'results') url = '/imoveis';
     if (view === 'detail' && patch.detailId) url = '/imovel/' + patch.detailId;
     if (history.pushState) history.pushState({}, '', url);
+    window.scrollTo({ top: 0, behavior: 'instant' });
     this.setState(patch);
   }
 
